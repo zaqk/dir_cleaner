@@ -10,19 +10,23 @@ def main():
 
     euid = os.geteuid()
     if euid != 0:
-        raise EnvironmentError("Need to be root")
+        raise EnvironmentError("Need to run as root")
         exit()
 
     pat = re.compile(regex_to_delete)
     
     for dir in dir_to_clean:
-        print("\n" + dir)
+	file_removed_flag = False
+        print("\nCurrent directory ::: " + dir)
         os.chdir(dir)
         for filename in os.listdir(dir):
             #print(filename)
             if(pat.match(filename)):
                 print("DELETING FILE ::: " + filename)
                 os.remove(filename)
+		file_removed_flag = True
+	if not file_removed_flag:
+		print("No files to remove")
 
 if __name__ == '__main__':
     main()
