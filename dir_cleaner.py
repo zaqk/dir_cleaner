@@ -20,7 +20,6 @@ def main():
         print("\nCurrent directory ::: " + dir)
         os.chdir(dir)
         for filename in os.listdir(dir):
-            #print(filename)
             if(pat.match(filename)):
                 print("DELETING FILE ::: " + filename)
                 os.remove(filename)
