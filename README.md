@@ -1,5 +1,5 @@
 <h3>dir_cleaner</h3>
-Simple python 2 and 3 compatible script to clean directories. Useful for cleaning specific files from a large file set (server logs, etc).
+Simple python 2 and 3 compatible script to clean directories. Useful for cleaning specific files from a large file set.
 <br/>
 <br/>
 <b>To use:</b><br/>
